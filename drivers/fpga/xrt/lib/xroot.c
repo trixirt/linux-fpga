@@ -427,7 +427,7 @@ static void xroot_bringup_group_work(struct work_struct *work)
 		r = xleaf_call(xdev, XRT_GROUP_INIT_CHILDREN, NULL);
 		xroot_put_group(xr, xdev);
 		if (r == -EEXIST)
-			continue; /* Already brough up, nothing to do. */
+			continue; /* Already brought up, nothing to do. */
 		if (r)
 			atomic_inc(&xr->groups.bringup_failed_cnt);
 
