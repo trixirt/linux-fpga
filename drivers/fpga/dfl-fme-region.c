@@ -46,7 +46,6 @@ static int fme_region_probe(struct platform_device *pdev)
 	}
 
 	region->priv = pdata;
-	region->compat_id = mgr->compat_id;
 	platform_set_drvdata(pdev, region);
 
 	ret = fpga_region_register(region);
@@ -75,7 +74,7 @@ static int fme_region_remove(struct platform_device *pdev)
 
 static struct platform_driver fme_region_driver = {
 	.driver	= {
-		.name    = DFL_FPGA_FME_REGION,
+		.name     = DFL_FPGA_FME_REGION,
 	},
 	.probe   = fme_region_probe,
 	.remove  = fme_region_remove,
