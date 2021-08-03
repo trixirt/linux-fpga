@@ -7,6 +7,7 @@ config R8188EU
 	select LIB80211
 	select LIB80211_CRYPT_WEP
 	select LIB80211_CRYPT_CCMP
+	depends on BROKEN
 	help
 	This option adds support for the Realtek RTL8188EU chipset, used in USB
 	devices such as the ASUS USB-N10 Nano. This newer driver is based on GitHub
